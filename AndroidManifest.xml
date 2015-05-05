@@ -493,24 +493,31 @@
         </activity>
         
         <activity
-            android:name="com.train.sync.WorkingInHandlerThread"
+            android:name="com.train.async.WorkingInHandlerThread"
             android:label="Working In New HandlerThread" >
             <intent-filter>
-                <action android:name="com.train.sync" />
+                <action android:name="com.train.async" />
             </intent-filter>
         </activity>
          <activity
-            android:name="com.train.sync.WorkingInMainThread"
+            android:name="com.train.async.WorkingInMainThread"
             android:label="Working In Main Thread" >
             <intent-filter>
-                <action android:name="com.train.sync" />
+                <action android:name="com.train.async" />
             </intent-filter>
         </activity>
          <activity
-            android:name="com.train.sync.AsynWorkHandlerTest"
+            android:name="com.train.async.AsynWorkHandlerTest"
             android:label="AsynWorkHandler Test" >
             <intent-filter>
-                <action android:name="com.train.sync" />
+                <action android:name="com.train.async" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.train.async.AsyncTaskTest"
+            android:label="AsyncTaskTest" >
+            <intent-filter>
+                <action android:name="com.train.async" />
             </intent-filter>
         </activity>
     </application>

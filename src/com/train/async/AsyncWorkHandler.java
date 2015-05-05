@@ -1,4 +1,4 @@
-package com.train.sync;
+package com.train.async;
 
 import android.content.AsyncQueryHandler;
 import android.os.Handler;

@@ -18,7 +18,7 @@ public class FilterApplication extends Activity implements OnClickListener {
 
 	private String[] categorys = new String[] { "db", "broadcast", "event",
 			"gesture", "activity", "file", "intent", "layout", "res",
-			"service", "tts", "view","media" ,"net","sync"};
+			"service", "tts", "view","media" ,"net","async"};
 	
 
 	public void onCreate(Bundle savedInstanceState) {
