@@ -1,0 +1,518 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.train"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 向SD卡写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <!-- 授予应用程序访问系统开机事件的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 授予程序接收短信的权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <!-- 授予该程序录制声音的权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 授予该程序使用摄像头的权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name=".view.MixViewActivity"
+            android:label="mixView" >
+            <intent-filter>
+                <action android:name="com.train.view" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.CodeViewActivity"
+            android:label="codeView" >
+            <intent-filter>
+                <action android:name="com.train.view" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.customview.CustomViewActivity"
+            android:label="CustomView" >
+            <intent-filter>
+                <action android:name="com.train.view" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.layout.LinearLayoutTest"
+            android:label="lineLayout" >
+            <intent-filter>
+                <action android:name="com.train.layout" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.layout.TableLayoutTest"
+            android:label="TableLayoutTest" >
+            <intent-filter>
+                <action android:name="com.train.layout" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.layout.FrameLayoutTest"
+            android:label="@string/app_framelayout_name" >
+            <intent-filter>
+                <action android:name="com.train.layout" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.layout.RelativeLayoutTest"
+            android:label="@string/app_name_relativelayout" >
+            <intent-filter>
+                <action android:name="com.train.layout" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.layout.AbsoluteLayoutTest"
+            android:label="absolute layout" >
+            <intent-filter>
+                <action android:name="com.train.layout" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.event.listener.EventQs"
+            android:label="@string/app_name_eventqs" >
+            <intent-filter>
+                <action android:name="com.train.event" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.event.PlaneGame"
+            android:label="PlaneGame" >
+            <intent-filter>
+                <action android:name="com.train.event" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.event.propagation.Propagation"
+            android:label="propagation Event" >
+            <intent-filter>
+                <action android:name="com.train.event" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.activity.other.OtherActivity"
+            android:label="@string/app_name_other_activity" >
+            <intent-filter>
+                <action android:name="com.train.activity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.activity.other.ExpandableListActivityTest"
+            android:label="查看星际兵种" >
+        </activity>
+        <activity
+            android:name="com.train.activity.other.PreferenceActivityTest"
+            android:label="设置程序参数" >
+            <intent-filter>
+                <action android:name="com.train.activity" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.activity.result.ActivityForResult"
+            android:label="Select City" >
+            <intent-filter>
+                <action android:name="com.train.activity" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.train.activity.result.SelectCityActivity" >
+        </activity>
+        <activity
+            android:name="com.train.intent.SysAction"
+            android:label="pickContact" >
+            <intent-filter>
+                <action android:name="com.train.intent" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.intent.DataAttr"
+            android:label="DataAttr" >
+            <intent-filter>
+                <action android:name="com.train.intent" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.intent.tab.IntentTab"
+            android:label="intentTab" >
+            <intent-filter>
+                <action android:name="com.train.intent" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.intent.tab.BeCalledActivity"
+            android:label="BeCalledActivity" >
+        </activity>
+        <activity
+            android:name="com.train.intent.tab.NoCallActivity"
+            android:label="NoCallActivity" >
+        </activity>
+        <activity
+            android:name="com.train.intent.tab.CalledActivity"
+            android:label="CalledActivity" >
+        </activity>
+        <activity
+            android:name="com.train.res.ArrayResTest"
+            android:label="@string/app_name_valueRes" >
+            <intent-filter>
+                <action android:name="com.train.res" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.res.drawable.AnimationDrawable.AnimationDrawable"
+            android:label="animal" >
+            <intent-filter>
+                <action android:name="com.train.res" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.res.drawable.LayerDrawableTest.LayerDrawableTest"
+            android:label="layerDrawable" >
+            <intent-filter>
+                <action android:name="com.train.res" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.res.drawable.ShapeDrawableTest.ShapeDrawableTest"
+            android:label="shapeDrawable" >
+            <intent-filter>
+                <action android:name="com.train.res" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.res.xml.XmlResTest"
+            android:label="ParseXml" >
+            <intent-filter>
+                <action android:name="com.train.res" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.res.menu.MenuResTest"
+            android:label="MenuTest" >
+            <intent-filter>
+                <action android:name="com.train.res" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.res.style.StyleResTest"
+            android:label="styleTest"
+            android:theme="@style/CrazyTheme" >
+            <intent-filter>
+                <action android:name="com.train.res" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.res.attr.AttrResTest"
+            android:label="AttrResTest" >
+            <intent-filter>
+                <action android:name="com.train.res" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.res.raw.RawResTest"
+            android:label="RawResTest" >
+            <intent-filter>
+                <action android:name="com.train.res" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.res.i18n.I18NTest"
+            android:label="i18NTest" >
+            <intent-filter>
+                <action android:name="com.train.res" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.file.sdcard.SDFileExplorer"
+            android:label="sdfileExpore" >
+            <intent-filter>
+                <action android:name="com.train.file" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.db.sqllite.Dict"
+            android:label="@string/app_name_dict" >
+            <intent-filter>
+                <action android:name="com.train.db" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.db.sqllite.ResultActivity"
+            android:label="找到的单词"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.train.gesture.GestureZoom"
+            android:label="GestureZoom" >
+            <intent-filter>
+                <action android:name="com.train.gesture" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.gesture.GestureFlip"
+            android:label="GestureFlip" >
+            <intent-filter>
+                <action android:name="com.train.gesture" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.res.drawable.ClipDrawableTest.ClipDrawableTest"
+            android:label="ClipDrawable" >
+            <intent-filter>
+                <action android:name="com.train.gesture" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.gesture.RecogniseGesture"
+            android:label="RecogGesture" >
+            <intent-filter>
+                <action android:name="com.train.gesture" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.gesture.AddGesture"
+            android:label="AddGesture" >
+            <intent-filter>
+                <action android:name="com.train.gesture" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.speech.Speech"
+            android:label="speech" >
+            <intent-filter>
+                <action android:name="com.train.tts" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.contentprovider.ContactProviderTest"
+            android:label="contractProvider" >
+            <intent-filter>
+                <action android:name="com.train.contentprovider" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.contentprovider.MediaProviderTest"
+            android:label="mediaProvider" >
+            <intent-filter>
+                <action android:name="com.train.contentprovider" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.db.sqllite.contentresolver.DictResolver"
+            android:label="DictResolver" >
+            <intent-filter>
+                <action android:name="com.train.db" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.db.sqllite.contentresolver.service.DictResolverMonitor"
+            android:label="DictResolver" >
+            <intent-filter>
+                <action android:name="com.train.db" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.train.db.sqllite.contentresolver.service.MonitorDictService" >
+            <intent-filter>
+                <action android:name="com.train.service.BIND_SERVICE" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.train.db.sqllite.contentresolver.service.MainActivity"
+            android:label="BindService" >
+            <intent-filter>
+                <action android:name="com.train.service" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.systemservice.alarm.AlarmChangeWallpaper"
+            android:label="change wallpaper" >
+            <intent-filter>
+                <action android:name="com.train.service" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.train.systemservice.alarm.ChangeService" >
+        </service>
+        <service android:name="com.train.service.ComplexService" >
+            <intent-filter>
+                <action android:name="com.train.service.complex" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="com.train.service.client.ComplexClient"
+            android:label="call complex servie" >
+            <intent-filter>
+                <action android:name="com.train.service" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.broadcast.MusicBox"
+            android:label="Music box" >
+            <intent-filter>
+                <action android:name="com.train.broadcast" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.train.broadcast.MusicService" >
+        </service>
+
+        <activity
+            android:name=".main.FilterApplication"
+            android:label="showCase" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".main.MainActivity"
+            android:label="list " >
+        </activity>
+
+        <provider
+            android:name=".db.sqllite.contentprovider.DictProvider"
+            android:authorities="com.train.providers.dictprovider"
+            android:label="dicProvider" >
+        </provider>
+
+        <activity
+            android:name=".broadcast.BroadcastMain"
+            android:label="Simple BroadCast" >
+            <intent-filter>
+                <action android:name="com.train.broadcast" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".broadcast.sorted.SortedBroadcast"
+            android:label="Sorted BroadCast" >
+            <intent-filter>
+                <action android:name="com.train.broadcast" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".broadcast.sorted.MyReceiver" >
+            <intent-filter android:priority="20" >
+                <action android:name="com.train.action.sorted.broadcast" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcast.sorted.MyReceiver2" >
+            <intent-filter android:priority="0" >
+                <action android:name="com.train.action.sorted.broadcast" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.system.LaunchReceiver"
+            android:label="LaunchReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".broadcast.system.LaunchService" >
+        </service>
+
+        <receiver android:name=".broadcast.system.SmsReceiver" >
+            <intent-filter android:priority="800" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcast.system.MonitorBattery" >
+
+            <!-- 监听电池电量改变 -->
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.train.media.SoundPoolTest"
+            android:label="SoundPool Test" >
+            <intent-filter>
+                <action android:name="com.train.media" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.media.VedioViewTest"
+            android:label="Video view" >
+            <intent-filter>
+                <action android:name="com.train.media" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.media.video.MainActivity"
+            android:label="RecordVideo Test" >
+            <intent-filter>
+                <action android:name="com.train.media" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".media.ChooseFile"
+            android:label="Choose video" >
+        </activity>
+        <activity
+            android:name="com.train.media.capture.CaptureImage"
+            android:label="CaptureImage" >
+            <intent-filter>
+                <action android:name="com.train.media" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.net.MultiThreadDown"
+            android:label="MutiThread download" >
+            <intent-filter>
+                <action android:name="com.train.net" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.net.httpclient.HttpClientTest"
+            android:label="http client Test" >
+            <intent-filter>
+                <action android:name="com.train.net" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.train.sync.WorkingInHandlerThread"
+            android:label="Working In New HandlerThread" >
+            <intent-filter>
+                <action android:name="com.train.sync" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.train.sync.WorkingInMainThread"
+            android:label="Working In Main Thread" >
+            <intent-filter>
+                <action android:name="com.train.sync" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.train.sync.AsynWorkHandlerTest"
+            android:label="AsynWorkHandler Test" >
+            <intent-filter>
+                <action android:name="com.train.sync" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="cancel">Cancel</string>
+    <string name="ok">单击我</string>
+    <string name="downloadres">
+    http://ivy.pconline.com.cn/adpuba/click?adid=350245&amp;id=pc.xz.rjxz.xinxi.zz2sf.&amp;__uuid=10220796
+    </string>
+
+</resources>
