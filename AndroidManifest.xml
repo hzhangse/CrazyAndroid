@@ -24,7 +24,7 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-
+<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -518,6 +518,44 @@
             android:label="AsyncTaskTest" >
             <intent-filter>
                 <action android:name="com.train.async" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.net.ws.CallWs"
+            android:label="CallWs" >
+            <intent-filter>
+                <action android:name="com.train.net" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.train.net.ws.MyWeather"
+            android:label="My Weather" >
+            <intent-filter>
+                <action android:name="com.train.net" />
+            </intent-filter>
+            <intent-filter>
+				<action android:name="android.intent.action.CREATE_SHORTCUT" />
+			</intent-filter>
+        </activity>
+         <activity
+            android:name="com.train.sensor.SensorSimulatorTest"
+            android:label="Sensor" >
+            <intent-filter>
+                <action android:name="com.train.sensor" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.train.sensor.Gradienter"
+            android:label="Gradienter" >
+            <intent-filter>
+                <action android:name="com.train.sensor" />
+            </intent-filter>
+        </activity>
+         <activity
+            android:name="com.train.sensor.Compass"
+            android:label="Compass" >
+            <intent-filter>
+                <action android:name="com.train.sensor" />
             </intent-filter>
         </activity>
     </application>

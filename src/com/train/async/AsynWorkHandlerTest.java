@@ -13,6 +13,12 @@ public class AsynWorkHandlerTest extends WorkingInMainThread {
 			progress_bar.setProgress(status.intValue());
 			asyncWorkHandler.getmWorkerHanler().post(update_thread);
 		}
+
+		@Override
+		protected Object excuteTask() {
+			// TODO Auto-generated method stub
+			return null;
+		}
 	};
 
 	protected void setHandle() {

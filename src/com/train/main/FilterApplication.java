@@ -1,5 +1,7 @@
 package com.train.main;
 
+import java.util.Arrays;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +20,7 @@ public class FilterApplication extends Activity implements OnClickListener {
 
 	private String[] categorys = new String[] { "db", "broadcast", "event",
 			"gesture", "activity", "file", "intent", "layout", "res",
-			"service", "tts", "view","media" ,"net","async"};
+			"service", "tts", "view","media" ,"net","async","sensor"};
 	
 
 	public void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class FilterApplication extends Activity implements OnClickListener {
 		setContentView(R.layout.main_list);
 		// 初始化控件并监听
 		LinearLayout layout = (LinearLayout) this.findViewById(R.id.root);
+		Arrays.sort(categorys);
 		for (String category : categorys) {
 			Button button = new Button(this);
 			ViewGroup.LayoutParams params = new LayoutParams(
