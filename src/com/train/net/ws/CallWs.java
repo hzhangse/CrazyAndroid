@@ -30,8 +30,8 @@ import com.train.net.httpclient.HttpClientTest;
 
 public class CallWs extends Activity
 {
-	final static String SERVICE_NS = "http://lee/";
-	final static String SERVICE_URL = "http://192.168.1.101:9999/crazyit";
+	final static String SERVICE_NS = "http://ws.train.com/";
+	final static String SERVICE_URL = "http://192.168.1.101:9999/ws";
 	private EditText txt1;
 	private EditText txt2;
 	String TAG ="Call Ws";
